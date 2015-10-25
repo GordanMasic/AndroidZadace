@@ -141,8 +141,25 @@ public class MainActivity extends AppCompatActivity {
             holder.removeButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    personList.removePerson(person.getID());
-                    updateUI();
+                    AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+                    alert.setTitle("Are you sure?");
+
+                    alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            personList.removePerson(person.getID());
+                            updateUI();
+                        }
+                    });
+
+                    alert.setNegativeButton("No",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                    dialog.cancel();
+                                }
+                            });
+
+                    alert.show();
+
                 }
             });
 
