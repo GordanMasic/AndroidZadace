@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Add people</string>
+    <string name="app_title">Add a person</string>
+    <string name="hint_name_homepage">Name</string>
+    <string name="hint_surname_homepage">Surname</string>
+    <string name="add_button_homepage">Add</string>
+    <string name="remove_button">Remove</string>
+    <string name="edit_button">Edit</string>
+    <string name="sort_by_name">Sort by name</string>
+    <string name="sort_by_surname">Sort by surname</string>
+    <string name="edit_person">Edit person</string>
+</resources>
